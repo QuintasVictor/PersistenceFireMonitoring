@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitoramento Preventivo de Inc&ecirc;ndios Florestais com UAVs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- carregamento não-bloqueante das fontes (degrada para fontes do sistema se offline) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=JetBrains+Mono:wght@400;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..900&family=JetBrains+Mono:wght@400;600&display=swap"></noscript>
+<link rel="stylesheet" href="css/tokens.css?v=20260618b">
+<link rel="stylesheet" href="css/app.css?v=20260618b">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1><span data-i18n="app.title">Monitoramento Preventivo de Inc&ecirc;ndios Florestais com UAVs:</span><br>
+      <em data-i18n="app.subtitle">uma arquitetura multimiss&atilde;o orientada ao risco</em></h1>
+    </div>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-attr="aria-label:app.lang.aria">
+        <button type="button" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="fullscreen-toggle" id="fullscreenToggle" type="button" data-i18n="app.fullscreen.enter">Tela cheia</button>
+    </div>
+  </header>
+
+  <!-- banner injetado se os dados não carregarem -->
+  <div id="dataBanner"></div>
+
+  <!-- barra de navegação entre módulos/abas (preenchida por app.js) -->
+  <nav class="nav" id="nav" role="tablist" aria-label="Módulos do showcase" data-i18n-attr="aria-label:app.nav.aria"></nav>
+
+  <!-- container onde a aba ativa é montada -->
+  <main id="view"></main>
+
+</div>
+
+<!-- ===== DADOS (gerado pelo MATLAB: export/sc_export_web.m) ===== -->
+<script src="data/campanha_data.js"></script>
+<script src="data/local_data.js"></script>
+
+<!-- ===== NÚCLEO ===== -->
+<script src="js/core/registry.js?v=20260618b"></script>
+<script src="js/core/i18n.js?v=20260620a"></script>
+<script src="js/core/colormaps.js?v=20260618b"></script>
+<script src="js/core/render.js?v=20260618b"></script>
+<script src="js/core/style3d.js?v=20260618b"></script>
+<script src="js/core/render3d.js?v=20260618b"></script>
+<script src="js/core/render_converge.js?v=20260618b"></script>
+<script src="js/data/dataLoader.js?v=20260618b"></script>
+<script src="js/data/localLoader.js?v=20260618b"></script>
+<script src="js/core/render_local.js?v=20260618b"></script>
+<script src="data/mapas_index.js?v=20260618b"></script>
+
+<!-- ===== ABAS (cada página é um módulo) ===== -->
+<script src="js/tabs/areaEstudo.js?v=20260618b"></script>
+<script src="js/tabs/riscoMap.js?v=20260618b"></script>
+<script src="js/tabs/campanha.js?v=20260618b"></script>
+<script src="js/tabs/missaoLocal.js?v=20260618b"></script>
+
+<!-- ===== BOOT ===== -->
+<script src="js/app.js?v=20260618b"></script>
+</body>
+</html>
+

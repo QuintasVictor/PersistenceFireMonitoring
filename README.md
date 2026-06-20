@@ -1,2 +1,0 @@
-# PersistenceFireMonitoring
-Undergraduate Thesis Graduation

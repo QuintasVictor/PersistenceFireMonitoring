@@ -1,0 +1,31 @@
+/* tokens.css — design tokens do showcase
+ *
+ * Shell (layout escuro) preservado do HTML original.
+ * Cores de DADOS espelham cg100_palette.m / ImageLab Style Guide:
+ *   route   = [0.10 0.95 1.00]  rota (ciano)
+ *   deficit = [0.15 0.35 0.75]  curva de deficit
+ *   tv      = [0.85 0.40 0.15]  curva TV(w,p)
+ *   empiric = [0.90 0.50 0.12]  massa de risco / empirica
+ *   coverage= [0.48 0.85 0.56]  cobertura espacial
+ * Mantenha este arquivo como fonte unica de cor; nao hardcode hex nos modulos.
+ */
+:root{
+  /* --- shell (estrutura escura, herdada do html original) --- */
+  --bg:#0f1318; --panel:#161c23; --panel2:#1b232c; --line:#28323d;
+  --ink:#ece7db; --muted:#93a0ac; --faint:#5c6873;
+  --accent:#ff7a45; --accent2:#ffb169;          /* destaque de UI (botoes/abas) */
+
+  /* --- dados: espelho de cg100_palette --- */
+  --c-route:#1af2ff;       /* rota sobre o mapa            */
+  --c-deficit:#2659bf;     /* curva ||d||_1                */
+  --c-tv:#d96626;          /* curva TV(w,p)                */
+  --c-empiric:#e6801f;     /* massa de risco atendida      */
+  --c-coverage:#7bd88f;    /* cobertura espacial           */
+  --c-target:#3352b8;      /* distribuicao-alvo            */
+  --c-pm:#fbe725;          /* p_m na sobreposicao          */
+  --c-base:#ffffff;        /* bases (quadrado branco)      */
+  --c-base-edge:#000000;
+
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
